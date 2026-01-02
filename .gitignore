@@ -1,0 +1,8 @@
+#main.c is a sandbox for the functions
+main.c 
+#ignoring all files .o
+*.o
+#same with .a
+*.a
+#same with executables
+*.out
