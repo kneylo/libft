@@ -13,10 +13,10 @@ void nk_putstr_fd(char *s, int fd)
     }
 }
 
-int main(void)
+/*int main(void)
 {
     char *s = "Steve!";
 	nk_putstr_fd(s, 1);
     nk_putchar('\n');
 	return (0);
-}
+}*/
