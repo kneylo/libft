@@ -31,7 +31,7 @@ SRCBONUS = nk_lstnew.c nk_lstadd_front.c nk_lstsize.c nk_lstlast.c nk_lstadd_bac
 OBJ			=		$(SRC:.c=.o)
 OBJBONUS	=		$(SRCBONUS:.c=.o)
 
-# commandes #
+# variables
 CC			=		gcc
 RM			=		rm -f
 CFLAGS		=		-Wall -Wextra -Werror -I.
