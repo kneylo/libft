@@ -51,7 +51,7 @@ all:				$(NAME)
 $(NAME):	$(OBJ)
 				$(AR) $(NAME) $(OBJ)
 
-# 
+# Compilation des fichiers .o depuis les .c
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
