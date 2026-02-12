@@ -11,21 +11,21 @@
 # **************************************************************************** #
 
 # fichiers source .c de la lib 
-SRC	=				nk_atoi.c nk_bzero.c nk_isalnum.c nk_isalpha.c \
-					nk_isascii.c nk_isdigit.c nk_isprint.c nk_memchr.c \
-					nk_memcpy.c nk_memmove.c nk_memset.c nk_strchr.c \
-					nk_strlcat.c nk_strlen.c nk_strncmp.c nk_toupper.c \
-					nk_strrchr.c nk_tolower.c nk_putchar_fd.c nk_putstr_fd.c \
-					nk_putendl_fd.c nk_putnbr_fd.c nk_putchar.c nk_putstr.c \
-					nk_putendl.c nk_putnbr.c nk_strrev.c nk_strcmp.c nk_strcat.c \
-					nk_strcpy.c nk_memccpy.c nk_strstr.c nk_strnstr.c nk_strlcpy.c \
-					nk_memcmp.c nk_strdup.c nk_calloc.c nk_substr.c nk_strjoin.c \
-					nk_strtrim.c nk_split.c nk_itoa.c nk_strmapi.c nk_striteri.c \
-					nk_strcapitalize.c
+SRC	=				ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c \
+					ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c \
+					ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c \
+					ft_strlcat.c ft_strlen.c ft_strncmp.c ft_toupper.c \
+					ft_strrchr.c ft_tolower.c ft_putchar_fd.c ft_putstr_fd.c \
+					ft_putendl_fd.c ft_putnbr_fd.c ft_putchar.c ft_putstr.c \
+					ft_putendl.c ft_putnbr.c ft_strrev.c ft_strcmp.c ft_strcat.c \
+					ft_strcpy.c ft_memccpy.c ft_strstr.c ft_strnstr.c ft_strlcpy.c \
+					ft_memcmp.c ft_strdup.c ft_calloc.c ft_substr.c ft_strjoin.c \
+					ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
+					ft_strcapitalize.c
 					
 # fichiers source bonus .c
-SRCBONUS = nk_lstnew.c nk_lstadd_front.c nk_lstsize.c nk_lstlast.c nk_lstadd_back.c \
-		   nk_lstdelone.c nk_lstclear.c nk_lstiter.c nk_lstmap.c
+SRCBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+		   ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 # changements des .c en .o 
 OBJ			=		$(SRC:.c=.o)
