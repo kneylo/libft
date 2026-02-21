@@ -1,20 +1,25 @@
 #include "libft.h"
 
-static size_t ft_len(long nb)
+int nblen(int nb)
 {
-    size_t len;
-
+    int len;
+    
     len = 0;
     if (nb == -2147483648)
-        return(11);
+        return (11);
     if (nb < 0)
+    {
+        nb *= -1;
         len++;
-    while (nb != 0)
+    }
+    if (nb == 0)
+        return (1);
+    while (nb > 0)
     {
         nb /= 10;
         len++;
     }
-    return(len);
+    return (len);
 }
 
 char    *ft_itoa(int n)
@@ -23,7 +28,7 @@ char    *ft_itoa(int n)
     int len;
     long nb;
 
-    nb = (long) nbr;
+    nb = (long) n;
     len = nblen(nb);
     res = malloc(sizeof(char) * (len + 1));
     if (!res)
@@ -48,9 +53,9 @@ char    *ft_itoa(int n)
     return (res);
 }
 
-/*int main(void)
+/*int main(int argc, char *argv[])
 {
-    int nb = 42;
-    printf("%s\nbr", ft_itoa(nb));
-    return(0);
+    (void)argc;
+    printf("%s\n", ft_itoa(ft_atoi(argv[1])));
+    return (0);
 }*/
