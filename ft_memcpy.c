@@ -19,9 +19,9 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
     return (dst);
 }
 
-int main(int argc, char *argv[])
+/*int main(int argc, char *argv[])
 {
     (void)argc;
     printf("%s\n", (char *)ft_memcpy(argv[1], argv[2], atoi(argv[3])));
     return (0);
-}
+}*/
