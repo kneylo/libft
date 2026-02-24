@@ -2,43 +2,26 @@
 
 void *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned char *dest;
-    const unsigned char *str;
+    unsigned char *d;
+    unsigned char *s;
+    size_t i;
 
-    dest = dst;
-    str =  src;
-    while (n--)
+    if (!dst || !src)
+        return (dst);
+    d = (unsigned char *)dst;
+    s = (unsigned char *)src;
+    i = 0;
+    while (i < n)
     {
-        *dest++ = *str++;
+        d[i] = s[i];
+        i++;
     }
     return (dst);
 }
 
-/*#include <stdio.h>
-int main(void)
+int main(int argc, char *argv[])
 {
-    int i = 0;
-    unsigned char dest[100];
-    unsigned char str[100];
-    while (i < 5)
-    {
-        str[i] = i + 1;
-        dest[i] = i + 12;
-        i++;
-    }
-    i = 0;
-    printf("first 5 bytes before memcpy(as int) : ");
-    while (i < 5)
-    {
-        printf("%d ", dest[i++]);
-    }
-    ft_memcpy(dest, str, 5);
-    printf("first 5 bytes after memcpy : ");
-    i = 0;
-    while (i < 5)
-    {
-        printf("%d ", dest[i++]);
-    }
-    printf("\n");
+    (void)argc;
+    printf("%s\n", (char *)ft_memcpy(argv[1], argv[2], atoi(argv[3])));
     return (0);
-}*/
+}
