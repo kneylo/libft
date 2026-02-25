@@ -2,28 +2,29 @@
 
 char       *ft_strdup(const char *s)
 {
-    char *d;
+    char *res;
     size_t i;
-    d = malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if(!d)
-    {
+
+    if (!s)
+        return (NULL);
+    res = malloc(sizeof(char) * (ft_strlen(s) + 1));
+    if(!res)
         return(NULL);
-    }
     i = 0;
     while(s[i])
     {
-        d[i] = (char)s[i];
+        res[i] = s[i];
         i++;
     }
-    d[i] = '\0';
-    return(d);
+    res[i] = '\0';
+    return(res);
 }
 
-/*int main(void)
+/*int main(int argc, char *argv[])
 {
-    unsigned char dest[] = "nu uh";
-    unsigned char src[] = "steve";
-    printf("dest avant: %s\n", dest);
-    dest[] = ft_strdup(src);
-    printf("dest après: %s\n", dest);
+    (void)argc;
+    char *res = ft_strdup(argv[1]);
+    printf("%s\n", res);
+    free (res);
+    return (0);
 }*/
