@@ -2,32 +2,24 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
+    size_t i;
     const unsigned char *str;
 
-    str = s;
-    while(n--)
+    str = (const unsigned char *)s;
+    i = 0;
+    while (i < n)
     {
-        if (*str == (unsigned char) c)
-        {
-            return((void *)str); //change le type de str pour pouvoir bien le return
-        }
-        else
-        {
-            str++;
-        }
+        if (str[i] == (unsigned char)c)
+            return ((void *)&str[i]);
+        i++;
     }
-    return(NULL);
+    return (NULL);
 }
 
-/*#include <stdio.h>
-int main(void)
+
+/*int main(int argc, char *argv[])
 {
-    const char *str = "Bonjour";
-    char *found = ft_memchr(str, 'j', 7); //stock la valeur dans found
-    
-    if (found) //si found != null
-        printf("Found: %s\n", found);
-    else
-        printf("Character not found.\n");
-    return(0);
+    (void)argc;
+    printf("%s\n", (char *)ft_memchr(argv[1], argv[2][0], ft_atoi(argv[3])));
+    return (0);
 }*/
