@@ -1,34 +1,28 @@
 #include "libft.h"
 
-int ft_memcmp(const void *dst, const void *src, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    const unsigned char *d;
-    const unsigned char *s;
+    const unsigned char *str1;
+    const unsigned char *str2;
     size_t i;
 
-    d = (const unsigned char *) dst;
-    s = (const unsigned char *) src;
+    str1 = (unsigned char *) s1;
+    str2 = (unsigned char *) s2;
     i = 0;
     if (n == 0)
-    {
-        return(0);
-    }
+        return (0);
     while (i < n)
     {
-        if (s[i] != d[i])
-        {
-            return(s[i] - d[i]);
-        }
+        if (str1[i] != str2[i])
+            return (str1[i] - str2[i]);
         i++;
     }
-    return(0);
+    return (0);
 }
 
-/*int main(void)
+/*int main(int argc, char *argv[])
 {
-    unsigned char *dst = "bonjour";
-    unsigned char *src = "bonjour";
-    int res;
-    res = ft_memcmp(dst, src, 7);
-    printf("%d\n", res);
+    (void)argc;
+    printf("%d\n", ft_memcmp(argv[1], argv[2], ft_atoi(argv[3])));
+    return (0);
 }*/
