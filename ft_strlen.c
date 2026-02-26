@@ -11,29 +11,9 @@ size_t ft_strlen(const char *str)
 }
 
 
-//#include <stdio.h>
-/*void ft_miniputnbr(int nb)
+/*int main(int argc, char *argv[])
 {
-    char c;
-
-    if (nb >= 0 && nb <= 9)
-    {
-        c = nb + '0';
-        write(1, &c, 1);
-    }
-    else if (nb > 9)
-    {
-        ft_miniputnbr(nb / 10);
-        ft_miniputnbr(nb % 10);
-    }
-}
-
-int main(void)
-{
-    int lenght;
-    lenght = ft_strlen("Steve!");
-    ft_miniputnbr(lenght);
-    write(1, "\n", 1);
-    //printf("%d\n", lenght);
+    (void)argc;
+    printf("%d\n", ft_strlen(argv[1]));
     return (0);
 }*/
