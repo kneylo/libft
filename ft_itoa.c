@@ -34,10 +34,15 @@ char    *ft_itoa(int n)
     if (!res)
         return (NULL);
     res[len--] = '\0';
+    if (nb == -2147483648)
+    {
+        res = '-2147483648';
+        return (res);
+    }
     if (nb == 0)
     {
         res[0] = '0';
-        return res;
+        return (res);
     }
     if (nb < 0)
     {
