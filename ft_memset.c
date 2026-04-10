@@ -1,12 +1,10 @@
 #include "libft.h"
-//stddef is for size_t, if using malloc, stdlib.h got size_t too
-//if malloc --> stdlib.h || if there's only size_t --> stdded.h
 
 void *ft_memset(void *s, int c, size_t len)
 {
     unsigned char *str;
 
-    str = s;
+    str = (unsigned char *) s;
     while (len)
     {
         *str = c;
@@ -27,8 +25,9 @@ return(s)*/
 int main(void)
 {
     int i = 0;
-    unsigned char s[100];
+    unsigned char s[100] = "Hello World";
     ft_memset(s, 42, 5);
+    printf("%s\n", s);
     printf("first 5 bytes(as numbers) : ");
     while (i < 5)
     {
