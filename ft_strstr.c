@@ -8,18 +8,14 @@ char *ft_strstr(char *str, char *to_find)
     i = 0;
     f = 0;
     if (to_find[0] == '\0')
-    {
         return (str);
-    }
     while (str[i])
     {
         while (str[i + f] == to_find[f] && to_find[f])
-        {            
+        {
             f++;
             if(to_find[f] == '\0')
-            {
                 return(str + i);
-            }
         }
         f = 0;
         i++;

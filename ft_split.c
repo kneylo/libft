@@ -2,13 +2,13 @@
 
 static char **ft_freearray(char **res, int i)
 {
-    while (i > 0)
+    while (i >= 0)
     {
-        i--;
         free(res[i]);
+        i--;
     }
-    free(res);
-    return(0);
+    free (res);
+    return (NULL);
 }
 
 static int ft_count_word(char const *s, char c)
@@ -20,9 +20,9 @@ static int ft_count_word(char const *s, char c)
     count = 0;
     while (s[i])
     {
-        if (s[i] == c)
+        while (s[i] && s[i] == c)
             i++;
-        else
+        if (s[i] && s[i] != c)
         {
             count++;
             while (s[i] && s[i] != c)
@@ -69,8 +69,8 @@ static char **ft_split_word(char const *s, char c, char **res, int nb_word)
             word_len++;
             i++;
         }
-        res[word] = ft_substr(s, start, word_len); //place le mot dans le tableau avec substr
-        /*res[word] = (char *)malloc(sizeof(char) * (word_len + 1)); //malloc le mot actuel*/
+        res[word] = ft_substr(s, start, word_len); /*place le mot dans le tableau avec substr
+        res[word] = (char *)malloc(sizeof(char) * (word_len + 1)); malloc le mot actuel*/
         if (!res[word])
             return(ft_freearray(res, word));
         word_len = 0; 

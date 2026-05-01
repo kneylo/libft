@@ -7,14 +7,17 @@ size_t     ft_strlcpy(char *dst, const char *src, size_t dstsize)
     i = 0;
     /*if (!src || !dst)  //to protect if one of the strings passed is NULL not in the function for 42
         return (0);*/
-    if (dstsize == 0)
+    if (!dstsize)
         return(ft_strlen(src));
-    while (src[i] && i < dstsize - 1)
+    if (size > 0)
     {
-        dst[i] = src[i];
-        i++;
+        while (src[i] && i < dstsize - 1)
+        {
+            dst[i] = src[i];
+            i++;
+        }
+        dst[i] = '\0';
     }
-    dst[i] = '\0';
     return(ft_strlen(src));
 }
 
