@@ -1,22 +1,18 @@
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t len)
+void *ft_memset(void *s, int c, size_t n)
 {
     unsigned char *str;
 
-    str = (unsigned char *) s;
-    while (len)
-    {
-        *str = c;
-        str++;
-        len--;
-    }
+    str = s;
+    while (n--)
+        *str++ = (unsigned char)c;
     return(s);
 }
 
 //faster while version
-/*while (len--)
-    *str++ = (unsigned char)c    --> change the (int) of c to unsigned char to compare it
+/*while (n--)
+    *str++ = (unsigned char)c    --> cast c to unsigned char to compare it
 return(s)*/
 
 
