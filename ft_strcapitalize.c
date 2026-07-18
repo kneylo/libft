@@ -21,11 +21,9 @@ char *ft_strcapitalize(char *str)
     return(str);
 }
 
-/*int main(void)
+/*int main(int argc, char **argv)
 {
-    char str[] = "i want to capitalize this sentence";
-    ft_strcapitalize(str);
-    ft_putstr(str);
-    ft_putchar('\n');
-    return(0);
+    (void)argc;
+    printf("%s\n", str_capitalize(argv[1]));
+    return (0);
 }*/
