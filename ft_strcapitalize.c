@@ -12,10 +12,10 @@ char *ft_strcapitalize(char *str)
         while (!(ft_isalpha(str[i])))
             i++;
         if (ft_isalpha(str[i]))
+            ft_toupper(str[i++]);
+        while (ft_isalpha(str[i]))
         {
-            str[i] = ft_toupper(str[i]);
-            while (ft_isalpha(str[i]))
-                i++;
+            ft_tolower(str[i++]);
         }
     }
     return(str);

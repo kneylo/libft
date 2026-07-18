@@ -2,13 +2,10 @@
 
 int ft_toupper(int c)
 {
-    if((c >= 'a' && c <= 'z'))
-        return(c - 32);
-    else
-        return(c);
+    return (c >= 'a' && c <= 'z' ? (c - 32) : c);
 }
 
-/*int ft_toupper(int c)
+/*int ft_tolower(int c)
 {
     return (c >= 'A' && c <= 'Z') ? (c + 32) : c;
 }*/
