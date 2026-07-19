@@ -2,6 +2,7 @@
 
 char *ft_strcapitalize(char *str)
 {
+    
     int i;
 
     i = 0;
@@ -12,10 +13,14 @@ char *ft_strcapitalize(char *str)
         while (!(ft_isalpha(str[i])))
             i++;
         if (ft_isalpha(str[i]))
-            ft_toupper(str[i++]);
+        {
+            str[i] = ft_toupper(str[i]);
+            i++;
+        }
         while (ft_isalpha(str[i]))
         {
-            ft_tolower(str[i++]);
+            str[i] = ft_tolower(str[i]);
+            i++;
         }
     }
     return(str);
@@ -24,6 +29,6 @@ char *ft_strcapitalize(char *str)
 /*int main(int argc, char **argv)
 {
     (void)argc;
-    printf("%s\n", str_capitalize(argv[1]));
+    printf("%s\n", ft_strcapitalize(argv[1]));
     return (0);
 }*/
