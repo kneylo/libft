@@ -1,5 +1,11 @@
+#to test functions
+test_main.c
+
 # Prerequisites
 *.d
+
+# pdf
+*.pdf
 
 # Object files
 *.o
