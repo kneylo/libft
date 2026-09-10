@@ -6,16 +6,16 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 05:01:59 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/09 05:12:01 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/09/10 14:56:09 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*res;
-	
+
 	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)
 		return (NULL);

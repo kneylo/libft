@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 16:03:47 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/09 22:47:30 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/09/10 14:53:02 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	if (argc != 4)
 		return (1);
-	printf("%s\n", (unsigned char *)ft_memset(argv[1], argv[2][0], atoi(argv[3])));
+	printf("%s\n", (unsigned char *)
+	ft_memset(argv[1], argv[2][0], atoi(argv[3])));
 	return (0);
 }*/

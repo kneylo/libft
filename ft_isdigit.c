@@ -6,13 +6,13 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 03:28:08 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/09 03:35:24 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/09/10 14:55:46 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return(c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }

@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 22:03:39 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/09 03:36:38 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/09/10 14:55:01 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-    return((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

@@ -6,18 +6,18 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 04:24:24 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/09 04:34:25 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/09/10 14:37:28 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	res;
 	int	i;
 	int	sign;
-	
+
 	res = 0;
 	i = 0;
 	sign = 1;
