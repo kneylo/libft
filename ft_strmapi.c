@@ -1,22 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 03:34:12 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/09 05:05:14 by nkreter          ###   ########.fr       */
+/*   Created: 2026/09/14 23:14:19 by nkreter           #+#    #+#             */
+/*   Updated: 2026/09/15 03:18:32 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	char			*res;
+	unsigned int	i;
 
+	res = ft_strdup(s);
+	if (!res)
+		return (NULL);
 	i = 0;
-	while (str[i])
-		ft_putchar(str[i++]);
+	while (res[i])
+	{
+		res[i] = f(i, res[i]);
+		i++;
+	}
+	return (res);
 }
+
+/*char f(unsigned int i, char c)
+{
+	if (i % 2 == 0)
+		return(ft_toupper(c));
+	return (c);
+}
+
+int main(int argc, char **argv)
+{
+	if (argc != 2)
+		return (1);
+	printf("%s\n", ft_strmapi(argv[1], f));
+	return (0);
+}*/

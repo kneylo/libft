@@ -1,36 +1,63 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/12 21:30:01 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/14 17:23:03 by nkreter          ###   ########.fr       */
+/*   Created: 2026/09/14 17:13:59 by nkreter           #+#    #+#             */
+/*   Updated: 2026/09/15 03:18:22 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	count_len(int nbr)
 {
-	size_t	s_len;
-	char	*res;
+	int	res;
 
-	s_len = ft_strlen(s);
-	if (len + start > s_len)
-		len = s_len - start;
-	res = malloc(sizeof(char) * len);
+	res = 0;
+	if (nbr <= 0)
+		res++;
+	while (nbr != 0)
+	{
+		res++;
+		nbr /= 10;
+	}
+	return (res);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*res;
+	int		len;	
+	long	nb;
+
+	nb = (long)n;
+	len = count_len(nb);
+	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
-	res = ft_memcpy(res, s + start, len);
+	res[len--] = '\0';
+	if (nb == 0)
+		return (res[0] = '0', res);
+	if (nb < 0)
+	{
+		nb *= -1;
+		res[0] = '-';
+	}
+	while (nb > 0)
+	{
+		res[len--] = nb % 10 + 48;
+		nb /= 10;
+	}
 	return (res);
 }
 
 /*int main(int argc, char **argv)
 {
-	if (argc != 4)
+	if (argc != 2)
 		return (1);
-	printf("%s\n", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
+	printf("%s\n", ft_itoa(atoi(argv[1])));
 	return (0);
 }*/
