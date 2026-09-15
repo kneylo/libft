@@ -1,5 +1,6 @@
 #to test functions
 test_main.c
+*.txt
 
 # Prerequisites
 *.d

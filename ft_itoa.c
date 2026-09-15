@@ -6,13 +6,13 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 17:13:59 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/15 03:18:22 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/09/15 15:02:20 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_len(int nbr)
+static int	count_len(int nbr)
 {
 	int	res;
 

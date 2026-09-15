@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 22:03:39 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/15 15:07:40 by nkreter          ###   ########.fr       */
+/*   Created: 2026/09/15 15:12:14 by nkreter           #+#    #+#             */
+/*   Updated: 2026/09/15 15:24:06 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	return (ft_isdigit(c) || ft_isalpha(c));
+	int	i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-/*int main(int argc, char **argv)
+/*void	f(unsigned int i, char *s)
+{
+	if (i % 2)
+		s[i] = ft_toupper(s[i]);
+}
+
+int main(int argc, char **argv)
 {
 	if (argc != 2)
 		return (1);
-	printf("%d\n", ft_isalnum(argv[1][0]));
-	return (1);
+	ft_striteri(argv[1], f);
+	printf("%s\n", argv[1]);
+	return (0);
 }*/
