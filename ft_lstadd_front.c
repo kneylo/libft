@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 16:15:15 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/23 15:43:21 by nkreter          ###   ########.fr       */
+/*   Created: 2026/09/17 09:29:10 by nkreter           #+#    #+#             */
+/*   Updated: 2026/09/24 18:18:27 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		ft_putchar_fd(s[i++], fd);
+	new->next = *lst;
+	*lst = new;
 }
 
-/*void	ft_putstr_fd(char *s, int fd)
+/*void	print_list(t_list *head)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
-}*/
+	t_list	*actual;
 
-/*int main(int argc, char **argv)
+	actual = head;
+	while (actual)
+	{
+		printf("%s -> ", (char *)actual->content);
+		actual = actual->next;
+	}
+	printf("NULL\n");
+}
+
+int	main(int argc, char **argv)
 {
-	int	fd;
-
-	if (argc != 2)
+	t_list *head;
+	t_list *nod1;
+	
+	head = ft_lstnew(argv[1]);
+	nod1 = ft_lstnew(argv[2]);
+	if (argc != 3)
 		return (1);
-	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fd == -1)
-		return (1);
-	printf("%d\n", fd);
-	ft_putstr_fd(argv[1], fd);
-	close(fd);
+	print_list(head);
+	ft_lstadd_front(&head, nod1);
+	print_list(head);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 15:11:00 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/11 01:42:11 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/09/24 17:24:40 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	s = ft_memset(s, '\0', n);
+	ft_memset(s, '\0', n);
 }
 
 /*int main(int argc, char **argv)

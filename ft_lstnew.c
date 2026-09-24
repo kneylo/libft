@@ -1,43 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 16:15:15 by nkreter           #+#    #+#             */
-/*   Updated: 2026/09/23 15:43:21 by nkreter          ###   ########.fr       */
+/*   Created: 2026/09/16 19:37:01 by nkreter           #+#    #+#             */
+/*   Updated: 2026/09/24 17:10:38 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (s[i])
-		ft_putchar_fd(s[i++], fd);
+	tmp = malloc(sizeof(t_list));
+	if (!tmp)
+		return (NULL);
+	tmp->content = content;
+	tmp->next = NULL;
+	return (tmp);
 }
 
-/*void	ft_putstr_fd(char *s, int fd)
+/*void	print_list(t_list *head)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
-}*/
+	t_list	*actual;
 
-/*int main(int argc, char **argv)
+	actual = head;
+	while (actual)
+	{
+		printf("%s -> ", (char *)actual->content);
+		actual = actual->next;
+	}
+	printf("NULL\n");
+}
+
+int main(int argc, char **argv)
 {
-	int	fd;
+	t_list *head;
 
 	if (argc != 2)
 		return (1);
-	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fd == -1)
-		return (1);
-	printf("%d\n", fd);
-	ft_putstr_fd(argv[1], fd);
-	close(fd);
+	head = ft_lstnew(argv[1]);
+	print_list(head);
 	return (0);
 }*/
