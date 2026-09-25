@@ -1,17 +1,16 @@
 _This project has been created as part of the 42 curriculum by [nekreter](https://github.com/kneylo)_
 <h1 align="center">
-	Libft
+	Libft <br>
+	<h3 align="center">
+		<a href="#description">Description</a>  ·
+		<a href="#content">Content</a>  ·
+		<a href="#instructions">Instructions</a>  ·
+		<a href="#resources">Resources</a>  ·
+		<a href="#testing">Testing</a>
+	</h3>
 </h1>
 
-<h3 align="center">
-	<a href="#description">Description</a>  ·
-	<a href="#content">Content</a>  ·
-    <a href="#instructions">Instructions</a>  ·
-    <a href="#resources">Resources</a>  ·
-    <a href="#testing">Testing</a>
-</h3>
-
----
+<br>
 
 ## Description
 This project is the first of my cursus at 42 Lausanne, the goal is to create our own C library by recreateing some standard libc functions and more,
@@ -71,12 +70,14 @@ add the .h to your code
 #include "libft.h"
 ```
 
-and add the required flags when testing
+an exemple of how to compile
 ``` c
--lft -L path/to/libft.a -I path/to/libft.h
+cc main.c path/to/libft.a
 ```
 
 ## Resources
+My main sources of informations on the web are theses link down here, AI was never used for code, only a very few times to names things better or to see a different approach, mainly for the Makefile and README
+
 [Gitbook 42](https://42-cursus.gitbook.io/guide)
 
 [Apprendre le C](https://apprendrelec.com/theory)
@@ -86,7 +87,7 @@ and add the required flags when testing
 [Basic Markdown Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## Testing
-First I did a main to every functions by themselves and after that I helped myself with these :
+First I did a main to every functions to test them myself and after that I helped myself with some tester that I found on github :
 
 [Libft tester](https://github.com/Tripouille/libftTester/)
 
