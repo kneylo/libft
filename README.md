@@ -76,7 +76,7 @@ cc main.c path/to/libft.a
 ```
 
 ## Resources
-My main sources of informations on the web are theses link down here, AI was never used for code, only a very few times to names things better or to see a different approach, mainly for the Makefile and README
+My main sources of informations on the web are theses links down here, AI was never used for code, only a very few times to names things better or to see a different approach, mainly for the Makefile and README
 
 [Gitbook 42](https://42-cursus.gitbook.io/guide)
 
@@ -87,7 +87,7 @@ My main sources of informations on the web are theses link down here, AI was nev
 [Basic Markdown Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## Testing
-First I did a main to every functions to test them myself and after that I helped myself with some tester that I found on github :
+First I did a main to every functions to test them myself and after that I helped myself with some tester that I found on github
 
 [Libft tester](https://github.com/Tripouille/libftTester/)
 
