@@ -13,19 +13,18 @@ _This project has been created as part of the 42 curriculum by [nekreter](https:
 <br>
 
 ## Description
-This project is the first of my cursus at 42 Lausanne, the goal is to create our own C library by recreateing some standard libc functions and more,
-all the functions are coded following [42 Norme](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf).
+This project is the first of my cursus at 42 Lausanne, the goal is to create our own C library by recreating some standard libc functions and more, all the functions are coded following [42 Norme](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf).
 
-The subject got 3 mandatory parts.
+The subject has 3 mandatory parts.
 * Basic libc functions
-* Additionals functions that are either not included or exist in a different form
+* Additional functions that are either not included or exist in a different form
 * Linked list
 
 *For more information, refer to the subject of the libft that can be found on the intra.*
 
 ## Content
 
-I divided the functions into 6 differents categories.
+I divided the functions into 6 different categories.
 | Categories | Functions |
 |---|---|
 | Characters checks and conversion | [`ft_isalpha`](./ft_isalpha.c) [`ft_isdigit`](./ft_isdigit.c) [`ft_isalnum`](./ft_isalnum.c) [`ft_isascii`](./ft_isascii.c) [`ft_isprint`](./ft_isprint.c) [`ft_toupper`](./ft_toupper.c) [`ft_tolower`](./ft_tolower.c) |
@@ -33,12 +32,12 @@ I divided the functions into 6 differents categories.
 | Memory manipulations | [`ft_memset`](./ft_memset.c) [`ft_bzero`](./ft_bzero.c) [`ft_memcpy`](./ft_memcpy.c) [`ft_memmove`](./ft_memmove.c) [`ft_memchr`](./ft_memchr.c) [`ft_memcmp`](./ft_memcmp.c) [`ft_calloc`](./ft_calloc.c) |
 | String creation and transformation | [`ft_strdup`](./ft_strdup.c) [`ft_substr`](./ft_substr.c) [`ft_strjoin`](./ft_strjoin.c) [`ft_strtrim`](./ft_strtrim.c) [`ft_split`](./ft_split.c) [`ft_itoa`](./ft_itoa.c) |
 | String iteration | [`ft_strmapi`](./ft_strmapi.c) [`ft_striteri`](./ft_striteri.c) |
-| Printing in a file descriptor | [`ft_putchar_fd`](./ft_putchar_fd.c) [`ft_putstr_fd`](./ft_putstr_fd.c) [`ft_putendl_fd`](./ft_putendl_fd.c) [`ft_putnbr_fd`](./ft_putnbr_fd.c) |
+| Printing to a file descriptor | [`ft_putchar_fd`](./ft_putchar_fd.c) [`ft_putstr_fd`](./ft_putstr_fd.c) [`ft_putendl_fd`](./ft_putendl_fd.c) [`ft_putnbr_fd`](./ft_putnbr_fd.c) |
 | Linked lists | [`ft_lstnew`](./ft_lstnew.c) [`ft_lstadd_front`](./ft_lstadd_front.c) [`ft_lstsize`](./ft_lstsize.c) [`ft_lstlast`](./ft_lstlast.c) [`ft_lstadd_back`](./ft_lstadd_back.c) [`ft_lstdelone`](./ft_lstdelone.c) [`ft_lstclear`](./ft_lstclear.c) [`ft_lstiter`](./ft_lstiter.c) [`ft_lstmap`](./ft_lstmap.c) |
 
 <br>
 
-Take note that for the linked lists, we have to add a structure (see below) into the .h for it to works well.
+Note that for the linked lists, we have to add a structure (see below) into the .h for it to work properly.
 
 ``` c
 typedef struct s_list
@@ -58,7 +57,7 @@ The makefile can be used to compile everything, clean everything etc.
 * **make fclean** - same as make clean but remove the .a with it
 * **make re** - recompile the library
 
-This is an exemple of how this libft can be used
+This is an example of how this libft can be used
 ``` shell
 $> git clone https://github.com/kneylo/libft.git
 $> cd libft
@@ -76,7 +75,7 @@ cc main.c path/to/libft.a
 ```
 
 ## Resources
-My main sources of informations on the web are theses links down here, AI was never used for code, only a very few times to names things better or to see a different approach, mainly for the Makefile and README
+My main sources of information on the web are these links below, AI was never used to create any code, only a very few times to names things better, spelling/grammar mistake or to see a different approach, mainly for the Makefile and README
 
 [Gitbook 42](https://42-cursus.gitbook.io/guide)
 
@@ -87,7 +86,7 @@ My main sources of informations on the web are theses links down here, AI was ne
 [Basic Markdown Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## Testing
-First I did a main to every functions to test them myself and after that I helped myself with some tester that I found on github
+First I did a main for every functions to test them myself and after that I used some testers that I found on github
 
 [Libft tester](https://github.com/Tripouille/libftTester/)
 
