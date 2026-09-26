@@ -75,7 +75,7 @@ cc main.c path/to/libft.a
 ```
 
 ## Resources
-My main sources of information on the web are these links below, AI was never used to create any code, only a very few times to names things better, spelling/grammar mistake or to see a different approach, mainly for the Makefile and README
+My main sources of information on the web are these links below, AI was never used to create any code, only a very few times to names things better or correcting spelling/grammar mistake.
 
 [Gitbook 42](https://42-cursus.gitbook.io/guide)
 
